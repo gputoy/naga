@@ -11,9 +11,9 @@ use thiserror::Error;
 
 #[derive(Clone, Debug)]
 pub struct ParseError {
-    message: String,
-    labels: Vec<(Span, Cow<'static, str>)>,
-    notes: Vec<String>,
+    pub message: String,
+    pub labels: Vec<(Span, Cow<'static, str>)>,
+    pub notes: Vec<String>,
 }
 
 impl ParseError {
